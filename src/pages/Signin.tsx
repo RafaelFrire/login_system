@@ -1,7 +1,7 @@
 import Login_component from '../components/Login/login_component.tsx';
 import Header from '../components/header/header.tsx';
 
-function Login_Page() {
+function Signin() {
   return (
     <div> 
         <Header title="Vison Solutions"/>
@@ -12,4 +12,4 @@ function Login_Page() {
   )
 }
 
-export default Login_Page
+export default Signin;

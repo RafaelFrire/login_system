@@ -10,4 +10,4 @@ function header(props:{title:string}) {
   )
 }
 
-export default header
+export default header;
