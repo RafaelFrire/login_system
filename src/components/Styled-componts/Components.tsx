@@ -10,13 +10,9 @@ export const FormContainer = Styled.form`
 
     p{
         color: red;
-        
-      
     }
 
 `
-
-
 
 export const Title = Styled.h1`
 

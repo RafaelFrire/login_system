@@ -1,19 +1,14 @@
 {
-  "posts": [
+  "user": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "email": "rafael@teste.com",
+      "password": "123456"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "email": "starlink@com.br",
+      "password": "123456"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
