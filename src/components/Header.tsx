@@ -1,6 +1,6 @@
 
 
-function header(props:{title:string}) {
+function Header(props:{title:string}) {
   return (
     <div className='bg-dark container-xl text-center p-3 '>
        <div className='fs-1 fw-bold text-white'>
@@ -10,4 +10,4 @@ function header(props:{title:string}) {
   )
 }
 
-export default header;
+export default Header;

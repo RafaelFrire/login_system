@@ -1,35 +1,51 @@
 import Axios from 'axios';
+import React from 'react';
 
 
+function useFetch({email, pwd}:any){
+  interface User{
+      email: string,
+      password: string;
+  }
 
-function useFetch({email, pwd}:any) {
-
-  const baseURL : string = "http://localhost:3000/user/";
-  
-    // Axios.post(baseURL, 
-    //   {"email": email,
-    //   "password": pwd
-    // });
-
+  const [user, setUser] = React.useState([]);
+  const [auth, setAuth] = React.useState(false);
+  const baseURL : string = "http://localhost:3000/user/";  
+    
+  React.useEffect(()=>{
     Axios({
       method: "get",
       url: baseURL
-    }).then((Response) =>{
-      const data = Response.data;
-      data.map((e:any) =>{
-        if(e.email == email && e.password == pwd){
-          console.log(e);
-        }
-      })
     })
+    .then((response) =>{
+        setUser(response.data)  
+    })
+  },[])
 
-    // validar se existe
 
+  React.useEffect(()=>{
+      
+      if(Array.isArray(user)){
+        user.map((event: User)=>{
+          if(event.email === email && event.password === pwd){
+            console.log("ACESSO PERMITIDO");
+            
+          }
+          else{
+            console.log("DADOS INCORRETO!!!");
+          }
+        })
+      }
+    
+   // console.log(email)
+
+  },[user])
 
 
     return (
-    <div>useFetch</div>
+    user
   )
 }
+
 
 export default useFetch
